@@ -270,6 +270,32 @@
 						{/if}
 					</div>
 				</th>
+
+
+				<th
+					scope="col"
+					class="px-3 py-1.5 cursor-pointer select-none"
+					on:click={() => setSortKey('last_active_at')}
+				>
+					<div class="flex gap-1.5 items-center">
+						{$i18n.t('Credit Balance')}
+
+						{#if sortKey === 'last_active_at'}
+							<span class="font-normal"
+								>{#if sortOrder === 'asc'}
+									<ChevronUp className="size-2" />
+								{:else}
+									<ChevronDown className="size-2" />
+								{/if}
+							</span>
+						{:else}
+							<span class="invisible">
+								<ChevronUp className="size-2" />
+							</span>
+						{/if}
+					</div>
+				</th>
+
 				<th
 					scope="col"
 					class="px-3 py-1.5 cursor-pointer select-none"
